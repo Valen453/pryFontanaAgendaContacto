@@ -57,5 +57,10 @@ namespace pryFontanaAgendaContacto
         {
             lstDatos.Items.Clear();
         }
+
+        private void frmAgenda_Load(object sender, EventArgs e)
+        {
+            txtContacto.Focus();
+        }
     }
 }

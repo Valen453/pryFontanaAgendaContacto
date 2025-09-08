@@ -52,7 +52,7 @@
             grbContacto.Location = new Point(100, 83);
             grbContacto.Name = "grbContacto";
             grbContacto.Size = new Size(267, 180);
-            grbContacto.TabIndex = 0;
+            grbContacto.TabIndex = 3;
             grbContacto.TabStop = false;
             grbContacto.Text = "Gestión";
             // 
@@ -61,7 +61,7 @@
             btnCancelar.Location = new Point(156, 120);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 3;
+            btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCancelar.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             mtxtNumero.Mask = "(999)000-0000";
             mtxtNumero.Name = "mtxtNumero";
             mtxtNumero.Size = new Size(100, 23);
-            mtxtNumero.TabIndex = 3;
+            mtxtNumero.TabIndex = 1;
             mtxtNumero.MaskChanged += mtxtNumero_MaskChanged;
             mtxtNumero.MaskInputRejected += mtxtNumero_MaskInputRejected;
             mtxtNumero.KeyDown += mtxtNumero_KeyDown;
@@ -96,7 +96,7 @@
             txtContacto.MaxLength = 47;
             txtContacto.Name = "txtContacto";
             txtContacto.Size = new Size(100, 23);
-            txtContacto.TabIndex = 2;
+            txtContacto.TabIndex = 0;
             txtContacto.TextChanged += txtContacto_TextChanged;
             // 
             // lblNumero
@@ -124,7 +124,7 @@
             lblAgendaContacto.Location = new Point(121, 24);
             lblAgendaContacto.Name = "lblAgendaContacto";
             lblAgendaContacto.Size = new Size(224, 37);
-            lblAgendaContacto.TabIndex = 1;
+            lblAgendaContacto.TabIndex = 0;
             lblAgendaContacto.Text = "Agenda Contacto";
             // 
             // lstDatos
@@ -158,6 +158,7 @@
             MaximumSize = new Size(500, 500);
             Name = "frmAgenda";
             Text = "Agenda de Contactos";
+            Load += frmAgenda_Load;
             grbContacto.ResumeLayout(false);
             grbContacto.PerformLayout();
             ResumeLayout(false);
