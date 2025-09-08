@@ -2,6 +2,8 @@ namespace pryFontanaAgendaContacto
 {
     public partial class frmAgenda : Form
     {
+
+        int Contactos = 0;
         public frmAgenda()
         {
             InitializeComponent();
@@ -22,6 +24,8 @@ namespace pryFontanaAgendaContacto
         private void btnCargar_Click(object sender, EventArgs e)
         {
             lstDatos.Items.Add(txtContacto.Text + " | " + mtxtNumero.Text);
+            Contactos += 1;
+            lblNumContactos.Text = Convert.ToString(Contactos);
         }
 
         private void mtxtNumero_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -34,18 +38,6 @@ namespace pryFontanaAgendaContacto
 
         }
 
-        private void mtxtNumero_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (mtxtNumero.Text != "")
-            {
-                btnCargar.Enabled = true;
-            }
-            else
-            {
-                btnCargar.Enabled = false;
-            }
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtContacto.Text = "";
@@ -56,11 +48,25 @@ namespace pryFontanaAgendaContacto
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             lstDatos.Items.Clear();
+            Contactos = 0;
+            lblNumContactos.Text = "0";
         }
 
         private void frmAgenda_Load(object sender, EventArgs e)
         {
             txtContacto.Focus();
+        }
+
+        private void mtxtNumero_TextChanged(object sender, EventArgs e)
+        {
+            if (mtxtNumero.Text != "")
+            {
+                btnCargar.Enabled = true;
+            }
+            else
+            {
+                btnCargar.Enabled = false;
+            }
         }
     }
 }

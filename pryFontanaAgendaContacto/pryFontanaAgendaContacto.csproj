@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>—Pngtree—calender icon calendar office number_6057228.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="—Pngtree—calender icon calendar office number_6057228.ico" />
+  </ItemGroup>
 
 </Project>
