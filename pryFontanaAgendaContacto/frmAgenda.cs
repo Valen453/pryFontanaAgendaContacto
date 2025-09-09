@@ -97,6 +97,13 @@ namespace pryFontanaAgendaContacto
                     lstDatos.Items.Add(contactos[indice] + " | " + telefonos[indice]);
                 }
                 indice++;
+
+            }
+
+            for (int indice = 0; indice < 5; indice++)
+            {
+                contactos[indice] = null;
+                telefonos[indice] = null;
             }
         }
     }
