@@ -41,6 +41,7 @@
             btnLimpiar = new Button();
             lblContactos = new Label();
             lblNumContactos = new Label();
+            btnMostrar = new Button();
             grbContacto.SuspendLayout();
             SuspendLayout();
             // 
@@ -141,7 +142,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(279, 397);
+            btnLimpiar.Location = new Point(257, 419);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(88, 30);
             btnLimpiar.TabIndex = 3;
@@ -152,7 +153,7 @@
             // lblContactos
             // 
             lblContactos.AutoSize = true;
-            lblContactos.Location = new Point(100, 405);
+            lblContactos.Location = new Point(100, 381);
             lblContactos.Name = "lblContactos";
             lblContactos.Size = new Size(129, 15);
             lblContactos.TabIndex = 4;
@@ -161,17 +162,28 @@
             // lblNumContactos
             // 
             lblNumContactos.AutoSize = true;
-            lblNumContactos.Location = new Point(235, 405);
+            lblNumContactos.Location = new Point(235, 381);
             lblNumContactos.Name = "lblNumContactos";
             lblNumContactos.Size = new Size(13, 15);
             lblNumContactos.TabIndex = 5;
             lblNumContactos.Text = "0";
+            // 
+            // btnMostrar
+            // 
+            btnMostrar.Location = new Point(108, 419);
+            btnMostrar.Name = "btnMostrar";
+            btnMostrar.Size = new Size(88, 30);
+            btnMostrar.TabIndex = 2;
+            btnMostrar.Text = "Mostrar";
+            btnMostrar.UseVisualStyleBackColor = true;
+            btnMostrar.Click += btnMostrar_Click;
             // 
             // frmAgenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(btnMostrar);
             Controls.Add(lblNumContactos);
             Controls.Add(lblContactos);
             Controls.Add(btnLimpiar);
@@ -181,6 +193,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(500, 500);
             Name = "frmAgenda";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Agenda de Contactos";
             Load += frmAgenda_Load;
             grbContacto.ResumeLayout(false);
@@ -203,5 +216,6 @@
         private Button btnLimpiar;
         private Label lblContactos;
         private Label lblNumContactos;
+        private Button btnMostrar;
     }
 }

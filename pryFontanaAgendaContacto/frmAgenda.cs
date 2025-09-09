@@ -2,6 +2,10 @@ namespace pryFontanaAgendaContacto
 {
     public partial class frmAgenda : Form
     {
+        string[] contactos = new string[5];
+        string[] telefonos = new string[5];
+
+        int indice = 0;
 
         int Contactos = 0;
         public frmAgenda()
@@ -23,9 +27,22 @@ namespace pryFontanaAgendaContacto
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            lstDatos.Items.Add(txtContacto.Text + " | " + mtxtNumero.Text);
+            if (indice >= 5)
+            {
+                indice = 0;
+            }
+
+            contactos[indice] = txtContacto.Text;
+            telefonos[indice] = mtxtNumero.Text;
+
+            //lstDatos.Items.Add(txtContacto.Text + " | " + mtxtNumero.Text);
             Contactos += 1;
+            indice++;
+
             lblNumContactos.Text = Convert.ToString(Contactos);
+            txtContacto.Text = "";
+            mtxtNumero.Text = "";
+            btnCargar.Enabled = false;
         }
 
         private void mtxtNumero_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -59,13 +76,27 @@ namespace pryFontanaAgendaContacto
 
         private void mtxtNumero_TextChanged(object sender, EventArgs e)
         {
-            if (mtxtNumero.Text != "")
+            if (mtxtNumero.MaskFull)
             {
                 btnCargar.Enabled = true;
             }
             else
             {
                 btnCargar.Enabled = false;
+
+            }
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            indice = 0;
+            while (indice < 5)
+            {
+                if (contactos[indice] != null)
+                {
+                    lstDatos.Items.Add(contactos[indice] + " | " + telefonos[indice]);
+                }
+                indice++;
             }
         }
     }
