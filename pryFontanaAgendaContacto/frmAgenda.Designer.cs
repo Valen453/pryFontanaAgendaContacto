@@ -53,7 +53,7 @@
             grbContacto.Controls.Add(txtContacto);
             grbContacto.Controls.Add(lblNumero);
             grbContacto.Controls.Add(lblContacto);
-            grbContacto.Location = new Point(100, 83);
+            grbContacto.Location = new Point(17, 74);
             grbContacto.Name = "grbContacto";
             grbContacto.Size = new Size(267, 180);
             grbContacto.TabIndex = 3;
@@ -62,7 +62,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(156, 120);
+            btnCancelar.Location = new Point(89, 124);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 0;
@@ -86,7 +86,7 @@
             // btnCargar
             // 
             btnCargar.Enabled = false;
-            btnCargar.Location = new Point(21, 120);
+            btnCargar.Location = new Point(170, 124);
             btnCargar.Name = "btnCargar";
             btnCargar.Size = new Size(75, 23);
             btnCargar.TabIndex = 1;
@@ -125,7 +125,7 @@
             // 
             lblAgendaContacto.AutoSize = true;
             lblAgendaContacto.Font = new Font("Segoe UI", 20F);
-            lblAgendaContacto.Location = new Point(121, 24);
+            lblAgendaContacto.Location = new Point(38, 15);
             lblAgendaContacto.Name = "lblAgendaContacto";
             lblAgendaContacto.Size = new Size(224, 37);
             lblAgendaContacto.TabIndex = 0;
@@ -135,14 +135,14 @@
             // 
             lstDatos.FormattingEnabled = true;
             lstDatos.ItemHeight = 15;
-            lstDatos.Location = new Point(100, 284);
+            lstDatos.Location = new Point(17, 275);
             lstDatos.Name = "lstDatos";
             lstDatos.Size = new Size(267, 94);
             lstDatos.TabIndex = 2;
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(257, 419);
+            btnLimpiar.Location = new Point(174, 410);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(88, 30);
             btnLimpiar.TabIndex = 3;
@@ -153,7 +153,7 @@
             // lblContactos
             // 
             lblContactos.AutoSize = true;
-            lblContactos.Location = new Point(100, 381);
+            lblContactos.Location = new Point(17, 372);
             lblContactos.Name = "lblContactos";
             lblContactos.Size = new Size(129, 15);
             lblContactos.TabIndex = 4;
@@ -162,7 +162,7 @@
             // lblNumContactos
             // 
             lblNumContactos.AutoSize = true;
-            lblNumContactos.Location = new Point(235, 381);
+            lblNumContactos.Location = new Point(152, 372);
             lblNumContactos.Name = "lblNumContactos";
             lblNumContactos.Size = new Size(13, 15);
             lblNumContactos.TabIndex = 5;
@@ -170,7 +170,7 @@
             // 
             // btnMostrar
             // 
-            btnMostrar.Location = new Point(108, 419);
+            btnMostrar.Location = new Point(25, 410);
             btnMostrar.Name = "btnMostrar";
             btnMostrar.Size = new Size(88, 30);
             btnMostrar.TabIndex = 2;
@@ -182,7 +182,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(306, 461);
             Controls.Add(btnMostrar);
             Controls.Add(lblNumContactos);
             Controls.Add(lblContactos);
