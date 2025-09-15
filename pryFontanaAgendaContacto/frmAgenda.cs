@@ -2,11 +2,11 @@ namespace pryFontanaAgendaContacto
 {
     public partial class frmAgenda : Form
     {
-        string[] contactos = new string[5];
-        string[] telefonos = new string[5];
+        public string[] contactos = new string[5];
+        public string[] telefonos = new string[5];
 
-        int indice = 0;
-        int indiceMostrar = 0;
+        public int indice = 0;
+        public int indiceMostrar = 0;
 
         int Contactos = 0;
         public frmAgenda()
@@ -36,8 +36,8 @@ namespace pryFontanaAgendaContacto
             contactos[indice] = txtContacto.Text;
             telefonos[indice] = mtxtNumero.Text;
 
-            lblNombreContacto.Text = contactos[0];
-            lblNumeroContacto.Text = telefonos[0];
+            //lblNombreContacto.Text = contactos[0];
+            //lblNumeroContacto.Text = telefonos[0];
             //lstDatos.Items.Add(txtContacto.Text + " | " + mtxtNumero.Text);
             Contactos += 1;
             indice++;
@@ -75,6 +75,10 @@ namespace pryFontanaAgendaContacto
         private void frmAgenda_Load(object sender, EventArgs e)
         {
             txtContacto.Focus();
+            frmVerContactos ventanaGestion = new frmVerContactos();
+            
+            ventanaGestion.
+            ventanaGestion.ShowDialog();
         }
 
         private void mtxtNumero_TextChanged(object sender, EventArgs e)
@@ -112,12 +116,13 @@ namespace pryFontanaAgendaContacto
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+
             if (indiceMostrar > 0)
             {
                 indiceMostrar--;
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
-                
+                //lblNombreContacto.Text = contactos[indiceMostrar];
+                //lblNumeroContacto.Text = telefonos[indiceMostrar];
+
             }
             else
             {
@@ -126,9 +131,10 @@ namespace pryFontanaAgendaContacto
                 {
                     indiceMostrar--;
                 }
+                { }
 
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                //lblNombreContacto.Text = contactos[indiceMostrar];
+                //lblNumeroContacto.Text = telefonos[indiceMostrar];
             }
         }
 
@@ -137,19 +143,26 @@ namespace pryFontanaAgendaContacto
             if (indiceMostrar < contactos.Length - 1)
             {
                 indiceMostrar++;
+
+                // Si da null vuelve al principio ya que no puede haber datos
                 if (contactos[indiceMostrar] == null)
                 {
                     indiceMostrar = 0;
                 }
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                //lblNombreContacto.Text = contactos[indiceMostrar];
+                //lblNumeroContacto.Text = telefonos[indiceMostrar];
             }
             else
             {
                 indiceMostrar = 0;
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                //lblNombreContacto.Text = contactos[indiceMostrar];
+                //lblNumeroContacto.Text = telefonos[indiceMostrar];
             }
+        }
+
+        private void lblNumContactos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
