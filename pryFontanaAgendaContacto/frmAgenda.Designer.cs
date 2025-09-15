@@ -37,11 +37,14 @@
             lblNumero = new Label();
             lblContacto = new Label();
             lblAgendaContacto = new Label();
-            lstDatos = new ListBox();
             btnLimpiar = new Button();
             lblContactos = new Label();
             lblNumContactos = new Label();
-            btnMostrar = new Button();
+            lblNombreContacto = new Label();
+            lblNumeroContacto = new Label();
+            lblDatosDeContacto = new Label();
+            btnSiguiente = new Button();
+            btnAnterior = new Button();
             grbContacto.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,7 +65,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(89, 124);
+            btnCancelar.Location = new Point(54, 125);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 0;
@@ -86,7 +89,7 @@
             // btnCargar
             // 
             btnCargar.Enabled = false;
-            btnCargar.Location = new Point(170, 124);
+            btnCargar.Location = new Point(135, 125);
             btnCargar.Name = "btnCargar";
             btnCargar.Size = new Size(75, 23);
             btnCargar.TabIndex = 1;
@@ -131,15 +134,6 @@
             lblAgendaContacto.TabIndex = 0;
             lblAgendaContacto.Text = "Agenda Contacto";
             // 
-            // lstDatos
-            // 
-            lstDatos.FormattingEnabled = true;
-            lstDatos.ItemHeight = 15;
-            lstDatos.Location = new Point(17, 275);
-            lstDatos.Name = "lstDatos";
-            lstDatos.Size = new Size(267, 94);
-            lstDatos.TabIndex = 2;
-            // 
             // btnLimpiar
             // 
             btnLimpiar.Location = new Point(174, 410);
@@ -153,7 +147,7 @@
             // lblContactos
             // 
             lblContactos.AutoSize = true;
-            lblContactos.Location = new Point(17, 372);
+            lblContactos.Location = new Point(12, 418);
             lblContactos.Name = "lblContactos";
             lblContactos.Size = new Size(129, 15);
             lblContactos.TabIndex = 4;
@@ -162,32 +156,72 @@
             // lblNumContactos
             // 
             lblNumContactos.AutoSize = true;
-            lblNumContactos.Location = new Point(152, 372);
+            lblNumContactos.Location = new Point(148, 418);
             lblNumContactos.Name = "lblNumContactos";
             lblNumContactos.Size = new Size(13, 15);
             lblNumContactos.TabIndex = 5;
             lblNumContactos.Text = "0";
             // 
-            // btnMostrar
+            // lblNombreContacto
             // 
-            btnMostrar.Location = new Point(25, 410);
-            btnMostrar.Name = "btnMostrar";
-            btnMostrar.Size = new Size(88, 30);
-            btnMostrar.TabIndex = 2;
-            btnMostrar.Text = "Mostrar";
-            btnMostrar.UseVisualStyleBackColor = true;
-            btnMostrar.Click += btnMostrar_Click;
+            lblNombreContacto.AutoSize = true;
+            lblNombreContacto.Location = new Point(143, 291);
+            lblNombreContacto.Name = "lblNombreContacto";
+            lblNombreContacto.Size = new Size(12, 15);
+            lblNombreContacto.TabIndex = 6;
+            lblNombreContacto.Text = "-";
+            // 
+            // lblNumeroContacto
+            // 
+            lblNumeroContacto.AutoSize = true;
+            lblNumeroContacto.Location = new Point(143, 325);
+            lblNumeroContacto.Name = "lblNumeroContacto";
+            lblNumeroContacto.Size = new Size(12, 15);
+            lblNumeroContacto.TabIndex = 7;
+            lblNumeroContacto.Text = "-";
+            // 
+            // lblDatosDeContacto
+            // 
+            lblDatosDeContacto.AutoSize = true;
+            lblDatosDeContacto.Location = new Point(106, 266);
+            lblDatosDeContacto.Name = "lblDatosDeContacto";
+            lblDatosDeContacto.Size = new Size(105, 15);
+            lblDatosDeContacto.TabIndex = 8;
+            lblDatosDeContacto.Text = "Datos de Contacto";
+            // 
+            // btnSiguiente
+            // 
+            btnSiguiente.Location = new Point(187, 366);
+            btnSiguiente.Name = "btnSiguiente";
+            btnSiguiente.Size = new Size(75, 23);
+            btnSiguiente.TabIndex = 9;
+            btnSiguiente.Text = ">";
+            btnSiguiente.UseVisualStyleBackColor = true;
+            btnSiguiente.Click += btnSiguiente_Click;
+            // 
+            // btnAnterior
+            // 
+            btnAnterior.Location = new Point(38, 366);
+            btnAnterior.Name = "btnAnterior";
+            btnAnterior.Size = new Size(75, 23);
+            btnAnterior.TabIndex = 10;
+            btnAnterior.Text = "<";
+            btnAnterior.UseVisualStyleBackColor = true;
+            btnAnterior.Click += btnAnterior_Click;
             // 
             // frmAgenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(306, 461);
-            Controls.Add(btnMostrar);
+            Controls.Add(btnAnterior);
+            Controls.Add(btnSiguiente);
+            Controls.Add(lblDatosDeContacto);
+            Controls.Add(lblNumeroContacto);
+            Controls.Add(lblNombreContacto);
             Controls.Add(lblNumContactos);
             Controls.Add(lblContactos);
             Controls.Add(btnLimpiar);
-            Controls.Add(lstDatos);
             Controls.Add(lblAgendaContacto);
             Controls.Add(grbContacto);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -212,10 +246,13 @@
         private MaskedTextBox mtxtNumero;
         private Button btnCancelar;
         private Button btnCargar;
-        private ListBox lstDatos;
         private Button btnLimpiar;
         private Label lblContactos;
         private Label lblNumContactos;
-        private Button btnMostrar;
+        private Label lblNombreContacto;
+        private Label lblNumeroContacto;
+        private Label lblDatosDeContacto;
+        private Button btnSiguiente;
+        private Button btnAnterior;
     }
 }

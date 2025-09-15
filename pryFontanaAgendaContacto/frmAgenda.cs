@@ -6,6 +6,7 @@ namespace pryFontanaAgendaContacto
         string[] telefonos = new string[5];
 
         int indice = 0;
+        int indiceMostrar = 0;
 
         int Contactos = 0;
         public frmAgenda()
@@ -35,6 +36,8 @@ namespace pryFontanaAgendaContacto
             contactos[indice] = txtContacto.Text;
             telefonos[indice] = mtxtNumero.Text;
 
+            lblNombreContacto.Text = contactos[0];
+            lblNumeroContacto.Text = telefonos[0];
             //lstDatos.Items.Add(txtContacto.Text + " | " + mtxtNumero.Text);
             Contactos += 1;
             indice++;
@@ -64,7 +67,7 @@ namespace pryFontanaAgendaContacto
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            lstDatos.Items.Clear();
+            //lstDatos.Items.Clear();
             Contactos = 0;
             lblNumContactos.Text = "0";
         }
@@ -94,7 +97,7 @@ namespace pryFontanaAgendaContacto
             {
                 if (contactos[indice] != null)
                 {
-                    lstDatos.Items.Add(contactos[indice] + " | " + telefonos[indice]);
+                    //lstDatos.Items.Add(contactos[indice] + " | " + telefonos[indice]);
                 }
                 indice++;
 
@@ -104,6 +107,40 @@ namespace pryFontanaAgendaContacto
             {
                 contactos[indice] = null;
                 telefonos[indice] = null;
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (indiceMostrar > 0)
+            {
+                indiceMostrar--;
+                lblNombreContacto.Text = contactos[indiceMostrar];
+                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                
+            }
+            else
+            {
+                indiceMostrar = contactos.Length - 1;
+                lblNombreContacto.Text = contactos[indiceMostrar];
+                lblNumeroContacto.Text = telefonos[indiceMostrar];
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (indiceMostrar < contactos.Length - 1)
+            {
+                indiceMostrar++;
+
+                lblNombreContacto.Text = contactos[indiceMostrar];
+                lblNumeroContacto.Text = telefonos[indiceMostrar];
+            }
+            else
+            {
+                indiceMostrar = 0;
+                lblNombreContacto.Text = contactos[indiceMostrar];
+                lblNumeroContacto.Text = telefonos[indiceMostrar];
             }
         }
     }
