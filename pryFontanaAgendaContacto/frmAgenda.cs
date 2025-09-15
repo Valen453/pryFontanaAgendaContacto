@@ -122,6 +122,11 @@ namespace pryFontanaAgendaContacto
             else
             {
                 indiceMostrar = contactos.Length - 1;
+                while (contactos[indiceMostrar] == null)
+                {
+                    indiceMostrar--;
+                }
+
                 lblNombreContacto.Text = contactos[indiceMostrar];
                 lblNumeroContacto.Text = telefonos[indiceMostrar];
             }
@@ -132,7 +137,10 @@ namespace pryFontanaAgendaContacto
             if (indiceMostrar < contactos.Length - 1)
             {
                 indiceMostrar++;
-
+                if (contactos[indiceMostrar] == null)
+                {
+                    indiceMostrar = 0;
+                }
                 lblNombreContacto.Text = contactos[indiceMostrar];
                 lblNumeroContacto.Text = telefonos[indiceMostrar];
             }
