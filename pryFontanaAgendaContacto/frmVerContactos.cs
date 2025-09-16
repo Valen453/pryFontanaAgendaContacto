@@ -31,26 +31,6 @@ namespace pryFontanaAgendaContacto
 
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-            indice = 0;
-            while (indice < 5)
-            {
-                if (vContactos[indice] != null)
-                {
-                    //lstDatos.Items.Add(contactos[indice] + " | " + telefonos[indice]);
-                }
-                indice++;
-
-            }
-
-            for (int indice = 0; indice < 5; indice++)
-            {
-                vContactos[indice] = null;
-                vTelefonos[indice] = null;
-            }
-        }
-
 
         private void btnAnterior_Click_1(object sender, EventArgs e)
         {
