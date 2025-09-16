@@ -28,19 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lblDatosDeContacto = new Label();
+            lblContactos = new Label();
+            lblNumContactos = new Label();
+            lblNombreContacto = new Label();
+            lblNumeroContacto = new Label();
             btnAnterior = new Button();
             btnSiguiente = new Button();
-            lblDatosDeContacto = new Label();
-            lblNumeroContacto = new Label();
-            lblNombreContacto = new Label();
-            lblNumContactos = new Label();
-            lblContactos = new Label();
-            btnLimpiar = new Button();
             SuspendLayout();
+            // 
+            // lblDatosDeContacto
+            // 
+            lblDatosDeContacto.AutoSize = true;
+            lblDatosDeContacto.Location = new Point(82, 23);
+            lblDatosDeContacto.Name = "lblDatosDeContacto";
+            lblDatosDeContacto.Size = new Size(105, 15);
+            lblDatosDeContacto.TabIndex = 16;
+            lblDatosDeContacto.Text = "Datos de Contacto";
+            // 
+            // lblContactos
+            // 
+            lblContactos.AutoSize = true;
+            lblContactos.Location = new Point(58, 170);
+            lblContactos.Name = "lblContactos";
+            lblContactos.Size = new Size(129, 15);
+            lblContactos.TabIndex = 12;
+            lblContactos.Text = "Cantidad de contactos:";
+            // 
+            // lblNumContactos
+            // 
+            lblNumContactos.AutoSize = true;
+            lblNumContactos.Location = new Point(194, 170);
+            lblNumContactos.Name = "lblNumContactos";
+            lblNumContactos.Size = new Size(13, 15);
+            lblNumContactos.TabIndex = 13;
+            lblNumContactos.Text = "0";
+            // 
+            // lblNombreContacto
+            // 
+            lblNombreContacto.AutoSize = true;
+            lblNombreContacto.Location = new Point(119, 48);
+            lblNombreContacto.Name = "lblNombreContacto";
+            lblNombreContacto.Size = new Size(12, 15);
+            lblNombreContacto.TabIndex = 14;
+            lblNombreContacto.Text = "-";
+            // 
+            // lblNumeroContacto
+            // 
+            lblNumeroContacto.AutoSize = true;
+            lblNumeroContacto.Location = new Point(119, 82);
+            lblNumeroContacto.Name = "lblNumeroContacto";
+            lblNumeroContacto.Size = new Size(12, 15);
+            lblNumeroContacto.TabIndex = 15;
+            lblNumeroContacto.Text = "-";
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(100, 162);
+            btnAnterior.Location = new Point(27, 124);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(75, 23);
             btnAnterior.TabIndex = 18;
@@ -50,7 +94,7 @@
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(249, 162);
+            btnSiguiente.Location = new Point(142, 124);
             btnSiguiente.Name = "btnSiguiente";
             btnSiguiente.Size = new Size(75, 23);
             btnSiguiente.TabIndex = 17;
@@ -58,65 +102,11 @@
             btnSiguiente.UseVisualStyleBackColor = true;
             btnSiguiente.Click += btnSiguiente_Click_1;
             // 
-            // lblDatosDeContacto
-            // 
-            lblDatosDeContacto.AutoSize = true;
-            lblDatosDeContacto.Location = new Point(168, 62);
-            lblDatosDeContacto.Name = "lblDatosDeContacto";
-            lblDatosDeContacto.Size = new Size(105, 15);
-            lblDatosDeContacto.TabIndex = 16;
-            lblDatosDeContacto.Text = "Datos de Contacto";
-            // 
-            // lblNumeroContacto
-            // 
-            lblNumeroContacto.AutoSize = true;
-            lblNumeroContacto.Location = new Point(205, 121);
-            lblNumeroContacto.Name = "lblNumeroContacto";
-            lblNumeroContacto.Size = new Size(12, 15);
-            lblNumeroContacto.TabIndex = 15;
-            lblNumeroContacto.Text = "-";
-            // 
-            // lblNombreContacto
-            // 
-            lblNombreContacto.AutoSize = true;
-            lblNombreContacto.Location = new Point(205, 87);
-            lblNombreContacto.Name = "lblNombreContacto";
-            lblNombreContacto.Size = new Size(12, 15);
-            lblNombreContacto.TabIndex = 14;
-            lblNombreContacto.Text = "-";
-            // 
-            // lblNumContactos
-            // 
-            lblNumContactos.AutoSize = true;
-            lblNumContactos.Location = new Point(210, 214);
-            lblNumContactos.Name = "lblNumContactos";
-            lblNumContactos.Size = new Size(13, 15);
-            lblNumContactos.TabIndex = 13;
-            lblNumContactos.Text = "0";
-            // 
-            // lblContactos
-            // 
-            lblContactos.AutoSize = true;
-            lblContactos.Location = new Point(74, 214);
-            lblContactos.Name = "lblContactos";
-            lblContactos.Size = new Size(129, 15);
-            lblContactos.TabIndex = 12;
-            lblContactos.Text = "Cantidad de contactos:";
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Location = new Point(236, 206);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(88, 30);
-            btnLimpiar.TabIndex = 11;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
-            // 
             // frmVerContactos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(254, 233);
             Controls.Add(btnAnterior);
             Controls.Add(btnSiguiente);
             Controls.Add(lblDatosDeContacto);
@@ -124,9 +114,9 @@
             Controls.Add(lblNombreContacto);
             Controls.Add(lblNumContactos);
             Controls.Add(lblContactos);
-            Controls.Add(btnLimpiar);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmVerContactos";
-            Text = "Form1";
+            Text = "Contactos";
             Load += frmVerContactos_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -134,13 +124,12 @@
 
         #endregion
 
+        private Label lblDatosDeContacto;
+        private Label lblContactos;
+        private Label lblNumContactos;
+        private Label lblNombreContacto;
+        private Label lblNumeroContacto;
         private Button btnAnterior;
         private Button btnSiguiente;
-        private Label lblDatosDeContacto;
-        private Label lblNumeroContacto;
-        private Label lblNombreContacto;
-        private Label lblNumContactos;
-        private Label lblContactos;
-        private Button btnLimpiar;
     }
 }

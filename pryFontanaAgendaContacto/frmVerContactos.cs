@@ -29,7 +29,9 @@ namespace pryFontanaAgendaContacto
 
         private void frmVerContactos_Load(object sender, EventArgs e)
         {
-
+            lblNombreContacto.Text = vContactos[0];
+            lblNumeroContacto.Text = vContactos[0];
+            indice++;
         }
 
 
