@@ -175,6 +175,7 @@ namespace pryFontanaAgendaContacto
         {
             frmVerContactos verContactos = new frmVerContactos(contactos, telefonos);
             verContactos.Show();
+            verContactos.pasarDatos = contactos;
         }
     }
 }

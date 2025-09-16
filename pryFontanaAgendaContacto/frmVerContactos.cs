@@ -17,6 +17,7 @@ namespace pryFontanaAgendaContacto
         int indiceMostrar = 0;
         private string[] vContactos;
         private string[] vTelefonos;
+        public string[] pasarDatos;
 
         public frmVerContactos(string[] contactos, string[] telefonos)
         {
