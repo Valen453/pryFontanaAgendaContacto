@@ -46,6 +46,7 @@
             btnAnterior.TabIndex = 18;
             btnAnterior.Text = "<";
             btnAnterior.UseVisualStyleBackColor = true;
+            btnAnterior.Click += btnAnterior_Click_1;
             // 
             // btnSiguiente
             // 
@@ -55,6 +56,7 @@
             btnSiguiente.TabIndex = 17;
             btnSiguiente.Text = ">";
             btnSiguiente.UseVisualStyleBackColor = true;
+            btnSiguiente.Click += btnSiguiente_Click_1;
             // 
             // lblDatosDeContacto
             // 

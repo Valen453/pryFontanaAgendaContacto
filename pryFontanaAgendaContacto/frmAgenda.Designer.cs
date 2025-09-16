@@ -40,6 +40,7 @@
             btnLimpiar = new Button();
             lblNumContactos = new Label();
             lblContactos = new Label();
+            btnVer = new Button();
             grbContacto.SuspendLayout();
             SuspendLayout();
             // 
@@ -158,16 +159,29 @@
             lblContactos.TabIndex = 4;
             lblContactos.Text = "Cantidad de contactos:";
             // 
+            // btnVer
+            // 
+            btnVer.Enabled = false;
+            btnVer.Location = new Point(148, 334);
+            btnVer.Name = "btnVer";
+            btnVer.Size = new Size(89, 33);
+            btnVer.TabIndex = 6;
+            btnVer.Text = "Ver Contactos";
+            btnVer.UseVisualStyleBackColor = true;
+            btnVer.Click += btnVer_Click_1;
+            // 
             // frmAgenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(306, 461);
+            Controls.Add(btnVer);
             Controls.Add(lblNumContactos);
             Controls.Add(lblContactos);
             Controls.Add(btnLimpiar);
             Controls.Add(lblAgendaContacto);
             Controls.Add(grbContacto);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(500, 500);
             Name = "frmAgenda";
@@ -193,5 +207,6 @@
         private Button btnLimpiar;
         private Label lblNumContactos;
         private Label lblContactos;
+        private Button btnVer;
     }
 }

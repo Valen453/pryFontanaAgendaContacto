@@ -28,6 +28,8 @@ namespace pryFontanaAgendaContacto
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            btnVer.Enabled = true;
+
             if (indice >= 5)
             {
                 indice = 0;
@@ -75,10 +77,14 @@ namespace pryFontanaAgendaContacto
         private void frmAgenda_Load(object sender, EventArgs e)
         {
             txtContacto.Focus();
-            frmVerContactos ventanaGestion = new frmVerContactos();
-            
-            ventanaGestion.
-            ventanaGestion.ShowDialog();
+        }
+
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            frmVerContactos verContactos = new frmVerContactos(contactos, telefonos);
+            verContactos.Show();
+
         }
 
         private void mtxtNumero_TextChanged(object sender, EventArgs e)
@@ -163,6 +169,12 @@ namespace pryFontanaAgendaContacto
         private void lblNumContactos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVer_Click_1(object sender, EventArgs e)
+        {
+            frmVerContactos verContactos = new frmVerContactos(contactos, telefonos);
+            verContactos.Show();
         }
     }
 }

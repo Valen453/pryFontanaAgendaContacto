@@ -15,25 +15,28 @@ namespace pryFontanaAgendaContacto
 
         int indice = 0;
         int indiceMostrar = 0;
+        private string[] vContactos;
+        private string[] vTelefonos;
 
-        frmVerContactos vContactos = contacto
-        public frmVerContactos()
+        public frmVerContactos(string[] contactos, string[] telefonos)
         {
             InitializeComponent();
-            
+            // Asigna el array recibido a la variable de la clase
+            this.vContactos = contactos;
+            this.vTelefonos = contactos;
         }
 
         private void frmVerContactos_Load(object sender, EventArgs e)
         {
 
         }
-     
+
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             indice = 0;
             while (indice < 5)
             {
-                if (contactos[indice] != null)
+                if (vContactos[indice] != null)
                 {
                     //lstDatos.Items.Add(contactos[indice] + " | " + telefonos[indice]);
                 }
@@ -43,55 +46,55 @@ namespace pryFontanaAgendaContacto
 
             for (int indice = 0; indice < 5; indice++)
             {
-                contactos[indice] = null;
-                telefonos[indice] = null;
+                vContactos[indice] = null;
+                vTelefonos[indice] = null;
             }
         }
 
-        private void btnAnterior_Click(object sender, EventArgs e)
-        {
 
+        private void btnAnterior_Click_1(object sender, EventArgs e)
+        {
             if (indiceMostrar > 0)
             {
                 indiceMostrar--;
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                lblNombreContacto.Text = vContactos[indiceMostrar];
+                lblNumeroContacto.Text = vTelefonos[indiceMostrar];
 
             }
             else
             {
-                indiceMostrar = contactos.Length - 1;
-                while (contactos[indiceMostrar] == null)
+                indiceMostrar = vContactos.Length - 1;
+                while (vContactos[indiceMostrar] == null)
                 {
                     indiceMostrar--;
                 }
                 { }
 
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                lblNombreContacto.Text = vContactos[indiceMostrar];
+                lblNumeroContacto.Text = vTelefonos[indiceMostrar];
             }
         }
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
+        private void btnSiguiente_Click_1(object sender, EventArgs e)
         {
-            if (indiceMostrar < contactos.Length - 1)
+            if (indiceMostrar < vContactos.Length - 1)
             {
                 indiceMostrar++;
 
                 // Si da null vuelve al principio ya que no puede haber datos
-                if (contactos[indiceMostrar] == null)
+                if (vContactos[indiceMostrar] == null)
                 {
                     indiceMostrar = 0;
                 }
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                lblNombreContacto.Text = vContactos[indiceMostrar];
+                lblNumeroContacto.Text = vTelefonos[indiceMostrar];
             }
             else
             {
                 indiceMostrar = 0;
-                lblNombreContacto.Text = contactos[indiceMostrar];
-                lblNumeroContacto.Text = telefonos[indiceMostrar];
+                lblNombreContacto.Text = vContactos[indiceMostrar];
+                lblNumeroContacto.Text = vTelefonos[indiceMostrar];
             }
-        }
+            }
     }
 }
